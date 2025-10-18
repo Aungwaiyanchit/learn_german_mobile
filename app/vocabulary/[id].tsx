@@ -1,34 +1,37 @@
 import {Text, FlatList, TouchableOpacity, View, TextInput, Platform} from 'react-native';
 import {useLocalSearchParams} from "expo-router/build/hooks";
-import {useFetch} from "@/hooks/useFetch";
-import {fetchVocabulary} from "@/services/api";
 import {SafeAreaView} from "react-native-safe-area-context";
-import React, {useState} from "react";
+import React, {useMemo, useState} from "react";
 import Ionicons from "@react-native-vector-icons/ionicons";
 import * as Speech from 'expo-speech';
 import {useDebounce} from "@/hooks/useDebounce";
 import {useNavigation} from "expo-router";
 import LoadingScreen from "@/components/LoadingScreen";
 import ListEmpty from "@/components/ListEmpty";
+import { useVocabulary } from "@/hooks/useVocabulary";
 
 export default function VocabularyList() {
-    const {id, name, color} = useLocalSearchParams();
-    const {data: vocabulary, status} = useFetch(() => fetchVocabulary(id as string), true);
+    const {id, name} = useLocalSearchParams();
+    const stringId = Array.isArray(id) ? id[0] : id;
+    const {data: vocabulary, status} = useVocabulary(stringId);
     const [searchText, setSearchText] = useState<string>('');
     const debouncedSearch = useDebounce(searchText, 400);
     const [searchVisible, setSearchVisible] = useState(false);
     const navigation = useNavigation();
 
 
-    const filterData = vocabulary?.filter(vocab => {
-        return vocab.term.toLowerCase().includes(debouncedSearch.toLowerCase()) ||
-            vocab.translation.toLowerCase().includes(debouncedSearch.toLowerCase());
-    })
+    const filterData = useMemo(() => {
+        if (!vocabulary) return [];
+        const search = debouncedSearch.toLowerCase();
+        return vocabulary.filter(vocab =>
+            vocab.term.toLowerCase().includes(search) ||
+            vocab.translation.toLowerCase().includes(search),
+        );
+    }, [debouncedSearch, vocabulary]);
 
-    if (status === "loading") {
+    if (status === "pending") {
         return   <LoadingScreen />;
     }
-
 
 
     return (
