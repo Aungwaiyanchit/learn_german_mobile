@@ -123,7 +123,7 @@ const ChapterSelector = ({
                     activeOpacity={0.8}
                     className="mb-2 rounded-2xl border border-black/10 bg-white px-4 py-3"
                     style={{
-                      borderColor: isSelected ? item.colorTag : "rgba(0,0,0,0.1)",
+                      borderColor: isSelected ? "#000" : "rgba(0,0,0,0.1)",
                     }}
                   >
                     <View className="flex-row items-center justify-between">
@@ -135,25 +135,23 @@ const ChapterSelector = ({
                           {item.title}
                         </Text>
                       </View>
-                      <View
-                        className="h-8 w-8 items-center justify-center rounded-full"
-                        style={{ backgroundColor: item.colorTag }}
-                      >
-                        {isSelected && (
-                          <Ionicons
-                            name="checkmark"
-                            size={18}
-                            color="#fff"
-                          />
-                        )}
-                      </View>
+                      <Ionicons
+                        name={
+                          isSelected ? "checkmark-circle" : "ellipse-outline"
+                        }
+                        size={18}
+                      />
                     </View>
                   </TouchableOpacity>
                 );
               }}
               ListEmptyComponent={() => (
                 <View className="items-center justify-center py-10">
-                  <Ionicons name="alert-circle-outline" size={24} color="#999" />
+                  <Ionicons
+                    name="alert-circle-outline"
+                    size={24}
+                    color="#999"
+                  />
                   <Text className="mt-2 text-sm text-black/60">
                     No chapters found. Try a different search.
                   </Text>

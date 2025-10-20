@@ -30,7 +30,7 @@ const Container = ({children}: { children: React.ReactNode }) => {
 
 const Index = () => {
     return (
-        <SafeAreaView className="flex-1">
+        <SafeAreaView className="flex-1 px-5">
             <ScrollView className="flex-1" showsVerticalScrollIndicator={false} contentContainerStyle={{
                 minHeight: '100%', paddingBottom: 80
             }}>
