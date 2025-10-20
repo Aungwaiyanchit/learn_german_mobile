@@ -41,7 +41,7 @@ export default function Grammar() {
   }, [data]);
 
   return (
-    <SafeAreaView className="flex-1 bg-white">
+    <SafeAreaView className="flex-1 bg-white px-5">
       <Header title="Grammar" />
       {status === "pending" ? (
         <SkeletonList showLevelBadge={true} />

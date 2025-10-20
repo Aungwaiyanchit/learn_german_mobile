@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import { PlatformPressable } from "@react-navigation/elements";
 import { useSharedValue, withSpring } from "react-native-reanimated";
 import Ionicons, {
@@ -56,7 +56,7 @@ export default function TabBarButton({
       onLongPress={onLongPress}
       style={styles.tabBarButton}
     >
-      <View className="flex  gap-2 items-center ">
+      <View className="flex-row  gap-2 items-center ">
         <Ionicons
           size={23}
           name={iconName}

@@ -7,7 +7,7 @@ const TabLayout = () => {
       tabBar={(props) => <MyTabBar {...props} />}
       screenOptions={{
         headerShown: false,
-        sceneStyle: { backgroundColor: "#fffff", padding: 15 },
+        sceneStyle: { backgroundColor: "#fffff" },
       }}
     >
       <Tabs.Screen

@@ -1,7 +1,7 @@
 import { Chapter, Vocabulary, Grammar } from "@/types";
 
 const GET = (url: string) => {
-  const URL = "https://learn-german-web-9tno.vercel.app/api" + url;
+  const URL = "https://learn-german-web.vercel.app/api" + url;
   return fetch(URL, {
     method: "GET",
     headers: {

@@ -16,6 +16,7 @@ export type Vocabulary = {
   chapterId: string;
   term: string;
   translation: string;
+  article: string;
 };
 
 export type Grammar = {

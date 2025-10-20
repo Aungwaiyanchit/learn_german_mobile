@@ -10,7 +10,7 @@ const Vocabulary = () => {
   const { data: chapters, status } = useChapters();
 
   return (
-    <SafeAreaView className="flex-1">
+    <SafeAreaView className="flex-1 px-5 bg-white">
       <Header title="Vocabulary" />
       {status === "pending" ? (
         <SkeletonList />

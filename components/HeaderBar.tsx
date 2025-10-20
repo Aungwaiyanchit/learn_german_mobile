@@ -18,7 +18,7 @@ const HeaderBar = ({ title, subtitle, onBack }: Props) => {
           disabled={!onBack}
           style={{ opacity: onBack ? 1 : 0.5 }}
         >
-          <Ionicons name="chevron-back" size={25} color="#fff" />
+          <Ionicons name="chevron-back" size={20} color="#fff" />
         </TouchableOpacity>
         <View>
           <Text className="text-black font-bold text-xl">{title}</Text>

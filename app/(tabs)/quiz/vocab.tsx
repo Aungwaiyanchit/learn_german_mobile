@@ -193,7 +193,7 @@ const VocabQuizScreen = () => {
 
   if (status === "idle") {
     return (
-      <View className="flex-1 px-5 pt-10" style={{ backgroundColor: COLORS.screen }}>
+      <View className="flex-1 px-5 pt-5" style={{ backgroundColor: COLORS.screen }}>
         <Text className="text-2xl font-semibold" style={{ color: COLORS.textPrimary }}>
           Vocabulary Challenge
         </Text>
