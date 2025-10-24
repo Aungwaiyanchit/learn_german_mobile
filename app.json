@@ -4,7 +4,7 @@
     "slug": "learn_german",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/icons/adaptive-icon.png",
     "scheme": "learngerman",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -36,7 +36,7 @@
     },
     "web": {
       "output": "static",
-      "favicon": "./assets/images/favicon.png",
+      "favicon": "./assets/icons/adaptive-icon.png",
       "bundler": "metro"
     },
     "plugins": [
