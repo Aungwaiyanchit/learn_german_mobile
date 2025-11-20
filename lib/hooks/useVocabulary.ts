@@ -3,7 +3,7 @@ import {
   UseQueryOptions,
   UseQueryResult,
 } from "@tanstack/react-query";
-import { fetchVocabulary } from "@/services/api";
+import { fetchVocabulary } from "@/lib/services/api";
 import { Vocabulary } from "@/types";
 
 type QueryOptions = Omit<

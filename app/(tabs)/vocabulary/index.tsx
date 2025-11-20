@@ -4,7 +4,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import Header from "@/components/Header";
 import SkeletonList from "@/components/SkeletonList";
 
-import { useChapters } from "@/hooks/useChapters";
+import { useChapters } from "@/lib/hooks/useChapters";
 
 const Vocabulary = () => {
   const { data: chapters, status } = useChapters();

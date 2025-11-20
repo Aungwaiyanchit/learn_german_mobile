@@ -1,5 +1,5 @@
 import { useQuery, UseQueryOptions, UseQueryResult } from "@tanstack/react-query";
-import { fetchChapters } from "@/services/api";
+import { fetchChapters } from "@/lib/services/api";
 import { Chapter } from "@/types";
 
 type QueryOptions = Omit<

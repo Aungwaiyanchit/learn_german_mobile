@@ -1,4 +1,4 @@
-import { useVocabulary } from "@/hooks/useVocabulary";
+import { useVocabulary } from "@/lib/hooks/useVocabulary";
 import { Vocabulary } from "@/types";
 import Ionicons from "@react-native-vector-icons/ionicons";
 import { useLocalSearchParams, useNavigation } from "expo-router";

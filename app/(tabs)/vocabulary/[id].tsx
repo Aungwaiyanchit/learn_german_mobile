@@ -11,11 +11,11 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import React, { useMemo, useState } from "react";
 import Ionicons from "@react-native-vector-icons/ionicons";
 import * as Speech from "expo-speech";
-import { useDebounce } from "@/hooks/useDebounce";
+import { useDebounce } from "@/lib/hooks/useDebounce";
 import { useRouter } from "expo-router";
 import LoadingScreen from "@/components/LoadingScreen";
 import ListEmpty from "@/components/ListEmpty";
-import { useVocabulary } from "@/hooks/useVocabulary";
+import { useVocabulary } from "@/lib/hooks/useVocabulary";
 
 export default function VocabularyList() {
   const { id, name } = useLocalSearchParams();
