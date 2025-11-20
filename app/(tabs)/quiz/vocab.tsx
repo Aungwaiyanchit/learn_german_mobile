@@ -10,8 +10,8 @@ import {
 import OptionCard from "@/components/OptionCard";
 import ChapterSelector from "@/components/ChapterSelector";
 
-import { useVocabQuestion } from "@/hooks/useVocabQuestion";
-import { fetchChapters } from "@/services/api";
+import { useVocabQuestion } from "@/lib/hooks/useVocabQuestion";
+import { fetchChapters } from "@/lib/services/api";
 import { Chapter } from "@/types";
 import { useQuery } from "@tanstack/react-query";
 

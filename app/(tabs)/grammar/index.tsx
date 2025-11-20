@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import { View, Text, FlatList, TouchableOpacity } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { fetchGrammar } from "@/services/api";
+import { fetchGrammar } from "@/lib/services/api";
 import { openBrowserAsync } from "expo-web-browser";
 import { useQuery } from "@tanstack/react-query";
 

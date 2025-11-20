@@ -1,5 +1,5 @@
-import { VocabQuestionService } from "@/services/VocabQuestionService";
-import { useVocabulary } from "@/hooks/useVocabulary";
+import { VocabQuestionService } from "@/lib/services/VocabQuestionService";
+import { useVocabulary } from "@/lib/hooks/useVocabulary";
 import { useState } from "react";
 import { Question } from "@/types";
 
